@@ -254,6 +254,13 @@
   top: 645px;
 }
 
+#divApplab.appModern #sizeDisplay {
+  min-width: 25px;
+  width: 75px;
+  left: 500px;
+  top: 670px;
+}
+
 #divApplab.appModern #instructionlabel {
   font-size: 21px;
   width: 202px;

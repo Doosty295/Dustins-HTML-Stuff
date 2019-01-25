@@ -154,15 +154,28 @@ onEvent("lineButton", "click", function(event){
 
 //KP Plus or KP Minus to change size
 onEvent("screen1", "keydown", function(event){
+
+
   if(event.key === "+"){
     size+= 5;
+    if(size > 50){size = 50;}
   }
   if(event.key === "-"){
     size-= 5;
+    if(size < 1){size = 1;}
   }
-
+  setText("sizeDisplay", size);
 });
 
+//sizebox
+onEvent("sizeDisplay", "keydown", function(event){
+  if(event.key === "Enter"){
+    if(size !== getText("sizeDisplay")){
+      size = getText("sizeDisplay");
+      setText("sizeDisplay", size);
+    }
+  }
+});
 
 
 //Undo and redo Backspace and Shift respectively
